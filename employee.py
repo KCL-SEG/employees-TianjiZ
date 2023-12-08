@@ -18,10 +18,10 @@ class Employee:
 
     def __str__(self):
         if self.hourly_rate is None:
-            base_str = f"{self.name} works on a monthly salary of {self.salary}."
+            base_str = f"{self.name} works on a monthly salary of {self.salary}"
         else:
             hours = self.salary // self.hourly_rate
-            base_str = f"{self.name} works on a contract of {hours} hours at {self.hourly_rate}/hour."
+            base_str = f"{self.name} works on a contract of {hours} hours at {self.hourly_rate}/hour"
 
         if self.commission > 0:
             if self.contract_count > 0:
@@ -30,7 +30,7 @@ class Employee:
                 commission_str = f" and receives a bonus commission of {self.commission}"
             return f"{base_str}{commission_str}. Their total pay is {self.get_pay()}."
         else:
-            return f"{base_str} Their total pay is {self.get_pay()}."
+            return f"{base_str}. Their total pay is {self.get_pay()}."
 
 # Employee instances
 billie = Employee('Billie', 4000)
